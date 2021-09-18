@@ -20,10 +20,12 @@ class Pokecard extends React.Component {
     return (
       <div className="Pokecard">
         <h1 className="Pokecard-title">{name}</h1>
-        <img
-          src={imgSrc}
-          alt="pokemon"
-        />
+        <div className="Pokecard-img">
+          <img
+            src={imgSrc}
+            alt="pokemon"
+          />
+        </div>
         <h3 className="Pokecard-data">Type: {type}</h3>
         <h3 className="Pokecard-data">EXP: {base_experience}</h3>
       </div>

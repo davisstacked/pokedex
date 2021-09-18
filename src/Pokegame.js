@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Pokedex from "./Pokedex";
 
-
+import './Pokegame.css'
 
 // once you've got this working, modify your Pokegame so that it also calculates the total experience for each hand of pokemon. It should pass this total to the Pokedex. 
 
@@ -83,15 +83,13 @@ class Pokegame extends Component {
     let exp1 = hand1.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
     let exp2 = hand2.reduce((exp, pokemon) => exp + pokemon.base_experience, 0);
 
-    const isWinner1 = () => exp1 > exp2 ? "This hand wins!" : "This hand loses!";
-    const isWinner2 = () => exp2 > exp1 ? "This hand wins!" : "This hand loses!";
-
     return (
       <div className="Pokegame">
+        <h1>Pokegame!</h1>
         <h1>Hand One!</h1>
-        <Pokedex pokemon={hand1} exp={exp1} isWinner={isWinner1()}/>
+        <Pokedex pokemon={hand1} exp={exp1} isWinner={exp1 > exp2}/>
         <h1>Hand Two!</h1>
-        <Pokedex pokemon={hand2} exp={exp2} isWinner={isWinner2()}/>
+        <Pokedex pokemon={hand2} exp={exp2} isWinner={exp2 > exp1}/>
       </div>
     )
   }
