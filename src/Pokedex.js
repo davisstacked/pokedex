@@ -62,6 +62,7 @@ export class Pokedex extends Component {
     return (
       <div className="Pokedex">
         <h1 className="Pokedex-title">Pokedex!</h1>
+        <div className="Pokedex-cards">
           {this.props.pokemon.map((p) => {
             return (
               <Pokecard
@@ -73,6 +74,7 @@ export class Pokedex extends Component {
             )
           })
           }
+        </div>
       </div>
     )
   }
