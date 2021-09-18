@@ -60,7 +60,7 @@ class Pokecard extends React.Component {
   render() {
     const { id, name, type, base_experience } = this.props;
 
-    let imgSrc = `${POKE_API}${id}`
+    let imgSrc = `${POKE_API}${id}.png`
     
     return (
       <div className="Pokecard">
