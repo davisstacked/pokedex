@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 // import Pokegame from "./Pokegame";
 // import NewTimerForm from "./InterviewReact/Kevin Interview/NewTimerForm";
-// import Timer from "./InterviewReact/Kevin Interview/Timer";
+// import { Timer } from "./InterviewReact/Kevin Interview/Timer";
 import TimerList from "./InterviewReact/Kevin Interview/TimerList";
 
 class App extends Component {
@@ -12,6 +12,7 @@ class App extends Component {
         {/* <Pokegame /> */}
         {/* <NewTimerForm /> */}
         < TimerList />
+        {/* <Timer /> */}
       </div>
     );    
   }

@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.Timer {
+  display: flex;
+  flex-direction: column;
+  border: solid, grey, 2px;
+  background-color: whitesmoke;
+  width: 30vw;
+}
+
+.Timer-title {
+  /* display: flex;
+  flex-direction: row; */
+  position: relative;
+  left: -40px;
+}

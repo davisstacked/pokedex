@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
+import './Timer.css';
+
 export const Timer = (props) => {
 
   const [time, setTime] = useState(0);
@@ -22,9 +24,11 @@ export const Timer = (props) => {
   }, [timerOn])
 
   return (
-    <div>
-      <div>
+    <div className="Timer">
+      <h4 className="Timer-title">
         {props.title}
+      </h4>
+      <div className="Timer-timer">
         {/* we divide it by 100 because when it gets up to 99 we want it to go back to zero. incrementing by 10 miliseconds so divide by 10 so shows up as 1. */}
         {/* Minutes */}
         <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}</span>:
@@ -33,9 +37,16 @@ export const Timer = (props) => {
         {/* Milliseconds */}
         <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
       </div>
-      <div>
-        <button onClick={() => setTimerOn(true)}>Start</button>
-        <button onClick={() => setTimerOn(false)}>Stop</button>
+      <div className="Timer-delete">
+        <button onClick={props.removeTimer}>Delete</button>
+      </div>
+      <div className="Timer-start">
+        {timerOn ? (
+            <button onClick={() => setTimerOn(!timerOn)}>Stop</button>
+          ) : (
+            <button onClick={() => setTimerOn(!timerOn)}>Start</button>
+          )
+        }
       </div>
     </div>
   )

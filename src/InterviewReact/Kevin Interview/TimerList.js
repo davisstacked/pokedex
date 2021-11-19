@@ -3,6 +3,8 @@ import { Timer } from './Timer';
 import NewTimerForm from './NewTimerForm';
 import { v4 as uuid } from "uuid";
 
+import "./TimerList.css"
+
 const TimerList = () => {
 
   const [timers, setTimers] = useState([]);
@@ -45,10 +47,12 @@ const TimerList = () => {
         />
     ) : (
 
-      <div>
-        <h1>Timers</h1>
-        {renderTimers()}
-        <button onClick={() => setForm(!form)}>
+      <div className="TimerList">
+        <h1 className="TimerList-title">Timers</h1>
+        <div className="TimerList-timers">
+          {renderTimers()}       
+        </div>
+        <button className="TimerList-add-button" onClick={() => setForm(!form)}>
           ADD
         </button>
       </div>
