@@ -1,40 +1,48 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0 auto;
-}
-
 .Timer {
   border: solid, grey, 2px;
   background-color: whitesmoke;
-  width: 45%;
+  width: 50%;
   display: grid;
   grid-template-areas: 
   ' title . . '
   ' . timer . '
   ' . . delete '
   ' start start start';
-  align-items: center;
-  justify-content:center;
-  text-align: center;
-  width: 50%;
+  align-items: stretch;
+  justify-content:stretch;
+  text-align: stretch;
   height: 20vh;
 }
 
 .Timer-title {
   grid-area: title;
+  padding-top: 10px;
+  font-size: 1.7rem;
+  font-weight: bolder;
 }
 
 .Timer-timer {
   grid-area: timer;
+  position: relative;
+  left: -15px;
+  font-size: 30px;
 } 
 
 .Timer-delete {
   grid-area: delete;
+  position: relative;
+  left: 10px;
 }
 
 .Timer-start {
   grid-area: start;
+  width: 100%;
 }
+
+.Timer-start > button {
+  width: 100%;
+  height: 100%;
+}
+
 
 

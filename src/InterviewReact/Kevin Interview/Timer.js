@@ -24,34 +24,43 @@ export const Timer = (props) => {
   }, [timerOn])
 
   return (
-    <div className="Timer">
-        <h4 className="Timer-title">
+    <div className='Timer'>
+      <h4 className='Timer-title'>
         {/* {props.title} */}
         Hello
-        </h4>
+      </h4>
 
-      <div className="Timer-timer">
+      <div className='Timer-timer'>
         {/* we divide it by 100 because when it gets up to 99 we want it to go back to zero. incrementing by 10 miliseconds so divide by 10 so shows up as 1. */}
         {/* Minutes */}
-        <span>{("0" + Math.floor((time / 60000) % 60)).slice(-2)}</span>:
+        <span>{('0' + Math.floor((time / 60000) % 60)).slice(-2)}</span>:
         {/* Seconds */}
-        <span>{("0" + Math.floor((time / 1000) % 60)).slice(-2)}</span>:
+        <span>{('0' + Math.floor((time / 1000) % 60)).slice(-2)}</span>:
         {/* Milliseconds */}
-        <span>{("0" + ((time / 10) % 100)).slice(-2)}</span>
+        <span>{('0' + ((time / 10) % 100)).slice(-2)}</span>
       </div>
-      <div className="Timer-delete">
+      <div className='Timer-delete'>
         <button onClick={props.removeTimer}>Delete</button>
       </div>
-      <div className="Timer-start">
+      <div className='Timer-start'>
         {timerOn ? (
-            <button onClick={() => setTimerOn(!timerOn)}>Stop</button>
-          ) : (
-            <button onClick={() => setTimerOn(!timerOn)}>Start</button>
-          )
-        }
+          <button
+            style={{ border: 'red solid 2px' }}
+            onClick={() => setTimerOn(!timerOn)}
+          >
+            Stop
+          </button>
+        ) : (
+          <button
+            style={{ border: 'green solid 2px' }}
+            onClick={() => setTimerOn(!timerOn)}
+          >
+            Start
+          </button>
+        )}
       </div>
     </div>
-  )
+  );
 }
 
 
