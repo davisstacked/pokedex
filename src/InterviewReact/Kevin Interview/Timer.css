@@ -5,16 +5,36 @@
 }
 
 .Timer {
-  display: flex;
-  flex-direction: column;
   border: solid, grey, 2px;
   background-color: whitesmoke;
-  width: 30vw;
+  width: 45%;
+  display: grid;
+  grid-template-areas: 
+  ' title . . '
+  ' . timer . '
+  ' . . delete '
+  ' start start start';
+  align-items: center;
+  justify-content:center;
+  text-align: center;
+  width: 50%;
+  height: 20vh;
 }
 
 .Timer-title {
-  /* display: flex;
-  flex-direction: row; */
-  position: relative;
-  left: -40px;
+  grid-area: title;
 }
+
+.Timer-timer {
+  grid-area: timer;
+} 
+
+.Timer-delete {
+  grid-area: delete;
+}
+
+.Timer-start {
+  grid-area: start;
+}
+
+

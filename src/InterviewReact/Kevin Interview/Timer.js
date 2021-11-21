@@ -25,9 +25,11 @@ export const Timer = (props) => {
 
   return (
     <div className="Timer">
-      <h4 className="Timer-title">
-        {props.title}
-      </h4>
+        <h4 className="Timer-title">
+        {/* {props.title} */}
+        Hello
+        </h4>
+
       <div className="Timer-timer">
         {/* we divide it by 100 because when it gets up to 99 we want it to go back to zero. incrementing by 10 miliseconds so divide by 10 so shows up as 1. */}
         {/* Minutes */}

@@ -49,7 +49,7 @@ const TimerList = () => {
 
       <div className="TimerList">
         <h1 className="TimerList-title">Timers</h1>
-        <div className="TimerList-timers">
+        <div>
           {renderTimers()}       
         </div>
         <button className="TimerList-add-button" onClick={() => setForm(!form)}>
