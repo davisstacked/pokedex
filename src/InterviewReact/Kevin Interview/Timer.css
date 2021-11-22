@@ -1,8 +1,8 @@
 .Timer {
   border: solid, grey, 2px;
   background-color: whitesmoke;
-  width: 50%;
   display: grid;
+  width: 40vw;
   grid-template-areas: 
   ' title . . '
   ' . timer . '
@@ -16,22 +16,22 @@
 
 .Timer-title {
   grid-area: title;
-  padding-top: 10px;
+  margin: 0 auto;
   font-size: 1.7rem;
   font-weight: bolder;
+  align-self: center;
 }
 
 .Timer-timer {
   grid-area: timer;
-  position: relative;
-  left: -15px;
   font-size: 30px;
 } 
 
 .Timer-delete {
   grid-area: delete;
-  position: relative;
-  left: 10px;
+  margin: 0 auto;
+  /* position: relative;
+  left: 10px; */
 }
 
 .Timer-start {

@@ -26,8 +26,7 @@ export const Timer = (props) => {
   return (
     <div className='Timer'>
       <h4 className='Timer-title'>
-        {/* {props.title} */}
-        Hello
+        {props.title}
       </h4>
 
       <div className='Timer-timer'>

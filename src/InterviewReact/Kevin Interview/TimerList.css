@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   padding: 0;
-  margin: 0 auto;
+  margin: 0;
   /* background-color: black; */
 }
 
@@ -30,10 +30,13 @@ body {
   font-weight: 900;
 }
 
-/* TimerList-timers {
-  width: 60%;
-  height: 60%;
-} */
+.TimerList-timers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px lightgray solid;
+}
 
 .TimerList-add-button {
   background-color: whitesmoke;

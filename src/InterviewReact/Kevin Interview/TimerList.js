@@ -22,8 +22,9 @@ const TimerList = () => {
   const renderTimers = () => {
     return (
       <ul>
-        <li style={{listStyleType: "none"}}>
-          {timers.map(timer => (
+        <li className='TimerList-timers'
+          style={{ listStyleType: 'none' }}>
+          {timers.map((timer) => (
             <Timer
               remove={() => removeTimer(timer.id)}
               key={timer.id}
@@ -33,7 +34,7 @@ const TimerList = () => {
           ))}
         </li>
       </ul>
-    )
+    );
   }
 
   return (
@@ -49,7 +50,7 @@ const TimerList = () => {
 
       <div className="TimerList">
         <h1 className="TimerList-title">Timers</h1>
-        <div>
+        <div className="TimerList-timers-wrapper">
           {renderTimers()}       
         </div>
         <button className="TimerList-add-button" onClick={() => setForm(!form)}>
